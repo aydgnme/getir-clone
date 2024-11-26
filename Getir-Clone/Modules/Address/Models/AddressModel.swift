@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct AddressModel {
     let streetName: String
-    let StreetNumber: String
+    let StreetNumber: String?
     let city: String
-    let postalCode: String
+    let postalCode: String?
     let country: String
     let coordinates: CLLocationCoordinate2D
     
@@ -26,8 +27,8 @@ struct AddressModel {
         ].compactMap { $0 }
             .joined(separator: ", ")
     }
-    
+    /*
     var coordinatesString: String {
         "Latitude: \(coordinates.latitude), Longitude: \(coordinates.longitude)"
-    }
+    }*/
 }

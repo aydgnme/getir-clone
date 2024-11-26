@@ -9,7 +9,14 @@ import SwiftUI
 
 struct MapMarkerView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Circle()
+                .fill(Color.indigo)
+                .frame(width: 30, height: 30)
+            Circle()
+                .fill(Color.yellow)
+                .frame(width: 10, height: 10)
+        }
     }
 }
 

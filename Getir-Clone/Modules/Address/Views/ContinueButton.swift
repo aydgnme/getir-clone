@@ -7,12 +7,19 @@
 
 import SwiftUI
 
-struct ContinueButton_: View {
+struct ContinueButton: View {
+    var action: () -> Void
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: action) {
+            Text("Continue")
+                .font(.headline)
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(.accent)
+                .cornerRadius(12)
+        }
+        .padding()
     }
-}
-
-#Preview {
-    ContinueButton_()
 }

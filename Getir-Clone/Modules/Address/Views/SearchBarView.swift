@@ -13,14 +13,17 @@ struct SearchBarView: View {
     var body: some View {
         HStack {
             Image(systemName: "magnifyingglass")
-                .foregroundColor(.gray)
+                .foregroundColor(.accent)
                 .padding(.leading)
+                .fontWeight(.black)
+                .frame(width: 50, height: 50)
             TextField("Search street or post code", text: $searchText)
                 .textFieldStyle(PlainTextFieldStyle())
-                .padding()
+                .fontWeight(.semibold)
+                .padding(.trailing, 20)
         }
         .background(Color.white)
-        .cornerRadius(25)
+        .cornerRadius(10)
         .padding()
     }
 }
